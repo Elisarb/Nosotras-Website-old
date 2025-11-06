@@ -4,61 +4,14 @@
     <meta charset="UTF-8">
     <title>Eventos</title>
     <meta name="author" content="EB">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- ===== HEADER ===== -->
+<div id="header"></div>
+
 <div style="text-align: center;">
-
-    <!-- Cabecera -->
-    <table style="width: 1201px; margin: auto; text-align: left;" border="0" cellpadding="2" cellspacing="2">
-        <tbody>
-            <tr>
-                <td style="text-align: center; vertical-align: middle;">
-                    <a href="index.html">
-                        <img src="image/index-es_90x60.jpg" alt="nosotras_español" style="border:0; width:90px; height:60px;">
-                    </a>
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <a href="index.html">
-                        <span style="font-weight: bold; font-family: Verdana;">Centro intercultural de información</span>
-                    </a>
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <img src="image/logo-264x68.jpg" alt="nosotras_logo" style="width:264px; height:68px;">
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <a href="ueber-uns-de.html">
-                        <span style="font-weight: bold; font-family: Verdana;">Interkulturelle Informationsstelle</span>
-                    </a>
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <a href="ueber-uns-de.html">
-                        <img src="image/deutsch_90x61.jpg" alt="nosotras_deutsch" style="border:0; width:90px; height:61px;">
-                    </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <br>
-
-    <!-- Menú -->
-    <table style="width: 1201px; margin: auto; text-align: center;" border="0" cellpadding="2" cellspacing="2">
-        <tbody>
-            <tr>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="ueber-uns-de.html">ÜBER UNS</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="unser-angebot-de.html">UNSER ANGEBOT</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="team-de.html">TEAM</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="event-und-kurse-de.html">KURSE</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="festival-de.html">EVENTS</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="projekte-de.html">PROJEKTE</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="contacto-es-de.html">KONTAKT</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="presse-de.html">PRESSE</a></td>
-                <td style="font-family: Verdana; font-weight: bold; color: rgb(44, 179, 224);"><a href="links-de.html">LINKS</a></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <br>
 
     <!-- Encabezado del evento -->
     <table style="width: 1201px; margin: auto; text-align: center;" border="0" cellpadding="2" cellspacing="2">
@@ -106,22 +59,25 @@
 
     <br>
 
-    <!-- Pie de página -->
-    <table style="width: 1201px; margin: auto; font-family: Verdana; background-color: rgb(44,179,224); font-weight: bold;" border="0" cellpadding="2" cellspacing="2">
-        <tbody>
-            <tr>
-                <td style="vertical-align: top;">
-                    Spalenring 150, 4055 Basel, Schweiz<br>
-                    Tel. 061 303 77 72 - 079 692 34 66<br>
-                    <span style="color: white;">
-                        <img src="image/YellowEnvelopPostwithRedArrow-50x31.jpg" alt="Contacto" style="border:0; width:50px; height:31px;">
-                        <span style="color: rgb(0,0,153);">info@nosotrasbasel.org</span>
-                    </span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    </div>
+    <!-- ===== FOOTER ===== -->
+   <div id="footer"></div>
 
-</div>
+
 </body>
 </html>
+<script>
+    // Cargar HEADER
+    fetch("header-de.html")
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById("header").innerHTML = t;
+      });
+
+    // Cargar FOOTER
+    fetch("footer-de.html")
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById("footer").innerHTML = t;
+      });
+  </script>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Galería</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="image/letter-n-and-world-globe.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <div id="header"></div>
+
+  <div class="main-content">
+    <section class="gallery-section">
+      <h2 class="section-title">Galería</h2>
+
+      <!-- ====== GRUPO 1 ====== -->
+      <div class="gallery-group active">
+        <div class="gallery-header">
+          <div>
+            <h3>IV Festival Latino de Danza y Canto</h3>
+            <p>Marzo 2010</p>
+          </div>
+          <span class="arrow">&#9654;</span>
+        </div>
+        <div class="gallery-grid hidden">
+          <img src="image/festival_01-292x195.jpg" alt="Festival 1">
+          <img src="image/festival_02-291x194.jpg" alt="Festival 2">
+          <img src="image/festival_03-292x195.jpg" alt="Festival 3">
+          <img src="image/festival_04-292x195.jpg" alt="Festival 4">
+          <img src="image/festival_05-292x195.jpg" alt="Festival 5">
+          <img src="image/festival_07-292x195.jpg" alt="Festival 6">
+        </div>
+      </div>
+
+      <!-- ====== GRUPO 2 ====== -->
+      <div class="gallery-group active">
+        <div class="gallery-header">
+          <div>
+            <h3>Festival Gastronómico Latinoamericano</h3>
+            <p>2018</p>
+          </div>
+          <span class="arrow">&#9654;</span>
+        </div>
+        <div class="gallery-grid hidden">
+          <img src="image/gastro_01.jpg" alt="Gastro 1">
+          <img src="image/gastro_02.jpg" alt="Gastro 2">
+          <img src="image/gastro_03.jpg" alt="Gastro 3">
+          <img src="image/gastro_04.jpg" alt="Gastro 4">
+          <img src="image/gastro_05.jpg" alt="Gastro 5">
+        </div>
+      </div>
+
+      <!-- ====== GRUPO 3 ====== -->
+      <div class="gallery-group active">
+        <div class="gallery-header">
+          <div>
+            <h3>Exposición Cultural y Artesanal</h3>
+            <p>2019</p>
+          </div>
+          <span class="arrow">&#9654;</span>
+        </div>
+        <div class="gallery-grid hidden">
+          <img src="image/art_01.jpg" alt="Arte 1">
+          <img src="image/art_02.jpg" alt="Arte 2">
+          <img src="image/art_03.jpg" alt="Arte 3">
+          <img src="image/art_04.jpg" alt="Arte 4">
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer"></div>
+
+  <script>
+    // Cargar HEADER y FOOTER
+    fetch("header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
+    fetch("footer.html").then(r => r.text()).then(t => document.getElementById("footer").innerHTML = t);
+
+    // Funcionalidad de abrir/cerrar carpetas
+    document.querySelectorAll(".gallery-header").forEach(title => {
+    title.addEventListener("click", () => {
+      const group = title.closest(".gallery-group");
+      group.classList.toggle("active");
+    });
+  });
+  </script>
+</body>
+</html>

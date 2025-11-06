@@ -1,0 +1,60 @@
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header class="site-header">
+  <div class="language-bar">
+    <div class="lang-left">
+      <a href="donar.html" class="donate-button">💚 Donar</a>
+    </div>
+    <div class="lang-right">
+      <a href="index.html">
+        <img src="image/index-es_90x60.jpg" alt="Español" class="lang-flag"> Español
+      </a>
+      |
+      <a href="ueber-uns-de.html">
+        <img src="image/deutsch_90x61.jpg" alt="Deutsch" class="lang-flag"> Deutsch
+      </a>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="header-logo">
+      <a href="index.html">
+        <img src="image/logo-264x68.jpg" alt="Nosotras Logo">
+      </a>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html" class="nav-link">¿Quiénes somos?</a>
+      <a href="que-ofrecemos-es.html" class="nav-link">¿Qué ofrecemos?</a>
+      <a href="team-es.html" class="nav-link">Team</a>
+      <a href="eventos-y-cursos-es.html" class="nav-link">Cursos</a>
+      <a href="festival-es.html" class="nav-link">Eventos</a>
+      <a href="proyectos-es.html" class="nav-link">Proyectos</a>
+      <a href="galeria.html" class="nav-link">Galería</a>
+      <a href="contacto-es-de.html" class="nav-link">Contacto</a>
+      <a href="prensa-es.html" class="nav-link">Prensa</a>
+      <a href="links-es.html" class="nav-link">Links</a>
+    </nav>
+  </div>
+</header>
+
+
+</body>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const siteNav = document.getElementById("siteNav");
+
+  menuToggle.addEventListener("click", () => {
+    siteNav.classList.toggle("show");
+  });
+</script>
